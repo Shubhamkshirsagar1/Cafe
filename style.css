@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/* body{
+
+} */
+h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem; 
+}
+h3,
+h4{
+    font-family: 'Mulish', sans-serif;
+}
+p,
+a,
+li,
+button{
+    font-family: 'Mulish', sans-serif;
+}
+p{
+    font-size: 1.5rem;
+    line-height: 135%;
+    font-style: normal;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+
+/*<<------------Main Css---------------->> */
+
+
+/*<<------------NAV-BAR---------------->> */
+#container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 2rem;
+}
+#container a{
+    font-family: "Sofia", sans-serif;
+    padding: 1rem 1rem;
+    font-size: 1.8rem;
+    color: black;
+}
+.nav-links li{
+    display: inline-block;
+}
+.nav-links a{
+    margin-left: 1.5rem;
+}
+.nav-links a:hover{
+    background-color: rgb(102, 84, 51);
+}
+
+/*<<-------------HAMBURGER IMAGE CSS --------------->> */
+.hamimg img{
+    /* taken width 100% relative to parent (navbar) */
+    width: 100%;
+}
+
+/*<<-------------#ABOUT SECTION--------------->> */
+#about{
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 6.4rem 6rem;
+}
+.disp{
+    flex:50%;
+    padding: 2rem;
+}
+.about-image img{
+    width: 100%;
+}
+.about-description h1,
+h3,
+p{
+    margin: 1.5rem 0rem;
+}
+
+.about-description h1,h2{
+    text-align: center;
+}
+
+
+/* --------------MENU SECTION------------------- */
+#menu{
+    display: flex;
+    margin: 6.4rem 6rem;
+}
+.divide{
+    flex:50%; /* flex-basis: 50%; */
+    padding: 2rem;
+}
+.menu-img img{
+    width: 100%;
+}
+.menu-card h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    text-decoration-line:underline;
+}
+.head{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 1.5rem 0rem;
+}
+.para{
+    font-size: 1.2rem;
+    margin: 2rem 0rem;
+    color:rgb(65, 40, 195);
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+
+/* --------------CONTACT SECTION ------------------- */
+#contact{
+    margin: 1rem 6rem;
+}
+#contact p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+input{
+        width: 100%;
+        border: 0.3rem solid #aaa;
+        border-radius: 0.4rem;
+        margin: 1rem 0rem;
+        padding: 0.5rem;
+        outline:none;
+        transition:ease-in;
+        transition: 2s;
+    }
+input:focus{
+    border-color: dodgerblue;
+}
+#contact button{
+    border: 0.3rem solid #aaa;
+    border-radius: 0.4rem;
+    margin: 1rem 0rem;
+    padding: 0.5rem;
+}
+#contact button:focus{
+    border-color: dodgerblue;
+}
+
+/* -------------- FOOTER SECTION---------------- */
+footer{
+    background-color: lightgray;
+}
+footer p{
+    color: rgb(201, 18, 22);
+    font-size: 1.8rem;
+    font-family:monospace;
+    padding: 2.5rem 0rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 942px){
+    .about-description .dissapier{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #about{
+        flex-direction: column;
+        margin: 4.4rem 4rem;
+    }
+    .about-image{
+        padding: 4rem;
+    }
+    .about-description{
+        order: -1;
+    }
+    #menu{
+        /* display: block; */
+        flex-direction: column;
+        margin: 3.4rem 3rem;
+    }
+    #menu .menu-card h4{
+        font-size: 2.8rem;
+    }
+    #menu .menu-card p{
+        font-size: 1.8rem;
+    }
+    #menu .divide{
+        text-align: center;
+    }
+    .menu-img img{
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #container{
+        flex-direction: column;
+        text-align: center;
+    }
+    #container .logo a{
+        font-size: 3rem;
+        color: dodgerblue;
+    }
+    #container .nav-links{
+        margin: 2rem;
+    }
+}
